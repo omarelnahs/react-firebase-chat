@@ -1,4 +1,18 @@
+.chatList::-webkit-scrollbar {
+    width: 5px;
+}
+.chatList::-webkit-scrollbar-track {
+    background: #232E33;
+    border-radius: 6px;
+}
+.chatList::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 6px;
+}
 .chatList{
+    flex:1;
+    overflow-y: scroll;
+
     .search{
         display: flex;
         align-items: center;
@@ -34,6 +48,34 @@
             padding: 10px;
             border-radius: 10px;
             cursor: pointer;
+        }
+    }
+    .item{
+        display: flex;
+        align-items: center;
+        gap:20px;
+        padding: 20px;
+        border-bottom: 1px solid #dddddd35;
+        cursor: pointer;
+
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .texts{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            span{
+                font-weight: 500;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 300;
+            }
         }
     }
 }
